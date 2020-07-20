@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import bg from '../../images/background.jpg'
+import bg from "../../images/background.jpg";
 // import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 // import ImgMediaCard from "../components/Card";
@@ -13,25 +13,22 @@ import { BrowserRouter as Router } from "react-router-dom";
 // import CardComp from "../../components/Card";
 // import ImageCardContext from "../../utils/ImageCardContext";
 import "./style.css";
-import {useTransition, animated, useSpring} from 'react-spring'
-import Card from "../../components/Card/index"
-import FlipCard from "../../components/FlipCard/index"
-import FlipCardTwo from "../../components/FlipCard2/index"
+import { useTransition, animated, useSpring } from "react-spring";
+import Card from "../../components/Card/index";
+import FlipCard from "../../components/FlipCard/index";
+import FlipCardTwo from "../../components/FlipCard2/index";
 import { CssBaseline } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-   
-  
-    
+    marginTop: 100,
   },
 
   card: {
     display: "flex",
     // maxWidth: 345,
-    marginTop : 250,
-    
+    marginTop: 250,
   },
   media: {
     height: 240,
@@ -58,29 +55,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-
 function Landing() {
   const classes = useStyles();
-//   const { imageCard } = useContext(ImageCardContext);
+  //   const { imageCard } = useContext(ImageCardContext);
 
   return (
     <Router>
       <div className={classes.root}>
-          
-        <Grid container spacing={2} >
-          <Grid item xs={12} sm={6}>  <FlipCard /></Grid>
-          <Grid item xs={0} sm={6}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6}>
+            <FlipCard />
+          </Grid>
+          <Grid item xs={12} sm={6}>
             <FlipCardTwo />
           </Grid>
-         
-
-          
-          
-         </Grid>
-         <div className={classes.card}>
-         <Card />
-       </div>
+        </Grid>
+        <div className={classes.card}>
+          <Card />
+        </div>
       </div>
     </Router>
   );

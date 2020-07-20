@@ -1,4 +1,4 @@
-import React, { useContext, useState,useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -25,8 +25,8 @@ import { Box, Button } from "@material-ui/core";
 import { withRouter } from "react-router-dom";
 import PanoramaIcon from "@material-ui/icons/Panorama";
 // import "./style.css";
-import {Spring} from "react-spring/renderprops";
-import {useTransition, animated, useSpring} from 'react-spring'
+import { Spring } from "react-spring/renderprops";
+import { useTransition, animated, useSpring } from "react-spring";
 
 const drawerWidth = 160;
 
@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    marginRight: -drawerWidth,
+    // marginRight: -drawerWidth,
   },
   contentShift: {
     transition: theme.transitions.create("margin", {
@@ -106,58 +106,49 @@ function HomeIcon(props) {
   );
 }
 const ToggleName = () => {
-    useEffect(() => {
-        setToggle(!isToggled);
-      }, []);
+  useEffect(() => {
+    setToggle(!isToggled);
+  }, []);
 
-const [isToggled, setToggle] =useState(false);
-const fade = useSpring({
-   transform : isToggled ? `translate3d(0,0,0) scale(1)` 
-   : `translate3d(0,-300%,0) scale(-0.5) `
-})
+  const [isToggled, setToggle] = useState(false);
+  const fade = useSpring({
+    transform: isToggled
+      ? `translate3d(0,0,0) scale(1)`
+      : `translate3d(0,-300%,0) scale(-0.5) `,
+  });
 
-    return (
-        <div>
-            <animated.h1 style={fade}>Emanuil Vartanyan</animated.h1>
-           
-        </div>
-    )
-}
+  return (
+    <div>
+      <animated.h1 style={fade}>Emanuil Vartanyan</animated.h1>
+    </div>
+  );
+};
 
 const ToggleMenu = () => {
-    useEffect(() => {
-        setToggle(!isToggled);
-      }, []);
+  useEffect(() => {
+    setToggle(!isToggled);
+  }, []);
 
-const [isToggled, setToggle] =useState(false);
-const fade = useSpring({
-   transform : isToggled ? `translate3d(0,0,0) scale(1)` 
-   : `translate3d(0,-300%,0) scale(-0.5) `
-})
+  const [isToggled, setToggle] = useState(false);
+  const fade = useSpring({
+    transform: isToggled
+      ? `translate3d(0,0,0) scale(1)`
+      : `translate3d(0,-300%,0) scale(-0.5) `,
+  });
 
-    return (
-       
-            <animated.div style={fade}><MenuIcon/></animated.div>
-           
-       
-    )
-}
-
+  return (
+    <animated.div style={fade}>
+      <MenuIcon />
+    </animated.div>
+  );
+};
 
 const PersistentDrawerRight = (props) => {
-  
- 
-
-   
-    
-
   const classes = useStyles();
   const theme = useTheme();
   const { history } = props;
   const [open, setOpen] = React.useState(false);
   const { darkMode } = useContext(ModeContext);
-  
-
 
   const itemsList = [
     {
@@ -195,12 +186,10 @@ const PersistentDrawerRight = (props) => {
   };
 
   return (
-     
-
-                   <div className={classes.root}>
+    <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        style={{backgroundColor: theme.palette.secondary.main}}
+        style={{ backgroundColor: theme.palette.secondary.main }}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
@@ -211,9 +200,9 @@ const PersistentDrawerRight = (props) => {
             ABA SIGNS
           </Typography> */}
           <Box className={classes.imageBox}>
-          <ToggleName />
+            <ToggleName />
           </Box>
-        
+
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -221,8 +210,9 @@ const PersistentDrawerRight = (props) => {
             onClick={handleDrawerOpen}
             className={clsx(open && classes.hide)}
             style={{ marginRight: "10px" }}
-          > <ToggleMenu />
-            
+          >
+            {" "}
+            <ToggleMenu />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -263,19 +253,8 @@ const PersistentDrawerRight = (props) => {
           })}
         </List>
         <Divider />
-        {/* <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List> */}
       </Drawer>
-    
-            
-         
-  </div>
+    </div>
   );
 };
 

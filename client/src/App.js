@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import {useSpring, animated} from 'react-spring'
-
+import { useSpring, animated } from "react-spring";
 
 import Container from "@material-ui/core/Container";
 import Landing from "./pages/Landing";
@@ -11,23 +10,23 @@ import { ThemeProvider, Paper, CssBaseline } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core";
 import ModeContext from "./utils/ModeContext";
 
-
 import PersistentDrawerRight from "./components/Navbar/index";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const props = useSpring({opacity: 1, duration: 0, from: {opacity: -2, duration: 10000 }})
-  
+  const props = useSpring({
+    opacity: 1,
+    duration: 0,
+    from: { opacity: -2, duration: 10000 },
+  });
 
-  useEffect(() => {
-   
-  }, []);
+  useEffect(() => {}, []);
 
   const theme = createMuiTheme({
     container: {
-      height: "1200px"
+      height: "1200px",
     },
-    
+
     typography: {
       fontFamily: " Red Rose, Arial",
     },
@@ -38,7 +37,7 @@ function App() {
         text: "#81c784",
       },
       secondary: {
-        main: "#870b0b",
+        main: "#34cceb",
         text: "#81c784",
       },
       success: {
@@ -51,22 +50,18 @@ function App() {
     <Router>
       {/* <Switch> */}
       <ModeContext.Provider value={{ darkMode, setDarkMode }}>
-        
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            {/* <Paper> */}
-              <div>
-                <PersistentDrawerRight />
-              
-                <Container maxWidth="xl" disableGutters={true} >
-                  <Route exact path="/" component={Landing} />
-                 
-                 
-                </Container>
-              </div>
-            {/* </Paper> */}
-          </ThemeProvider>
-       
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          {/* <Paper> */}
+          <div>
+            <Container maxWidth="xl" disableGutters={true}>
+              <PersistentDrawerRight />
+
+              <Route exact path="/" component={Landing} />
+            </Container>
+          </div>
+          {/* </Paper> */}
+        </ThemeProvider>
       </ModeContext.Provider>
       {/* </Switch> */}
     </Router>
