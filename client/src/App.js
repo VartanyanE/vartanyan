@@ -23,10 +23,6 @@ function App() {
   useEffect(() => {}, []);
 
   const theme = createMuiTheme({
-    container: {
-      height: "1200px",
-    },
-
     typography: {
       fontFamily: " Red Rose, Arial",
     },

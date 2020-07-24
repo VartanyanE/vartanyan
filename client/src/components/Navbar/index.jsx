@@ -33,8 +33,12 @@ const drawerWidth = 160;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+    fontSize: 10,
   },
 
+  font: {
+    fontSize: 20,
+  },
   imageLogo: {
     display: "flex",
     height: "50px",
@@ -200,7 +204,21 @@ const PersistentDrawerRight = (props) => {
             ABA SIGNS
           </Typography> */}
           <Box className={classes.imageBox}>
-            <ToggleName />
+            <section>
+              <div className="heading">
+                <h3 className="cd-headline clip is-full-width">
+                  <span className="cd-words-wrapper">
+                    <b className="is-visible"></b>
+                    <b className={classes.font}>Hello</b>
+                    <b className={classes.font}>I am Emanuil Vartanyan</b>
+                    <b className={classes.font}>I am a full-stack developer</b>
+                    <b className={classes.font}>Interact with my portfolio</b>
+                    <b className={classes.font}>No really</b>
+                    <b className={classes.font}>Everything is interactive</b>
+                  </span>
+                </h3>
+              </div>
+            </section>
           </Box>
 
           <IconButton

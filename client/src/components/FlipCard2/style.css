@@ -2,10 +2,10 @@ html,
 body,
 #root {
   /* margin: 0;
-  padding: 0;
+  padding: 0; */
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden;
   user-select: none;
   background: #f0f0f0; */
 }
@@ -23,8 +23,8 @@ body,
   position: absolute;
   max-width: 500px;
   max-height: 500px;
-  width: 20ch;
-  height: 20ch;
+  width: 15ch;
+  height: 15ch;
   cursor: pointer;
   will-change: transform, opacity;
 }

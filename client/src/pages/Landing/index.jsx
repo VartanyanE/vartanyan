@@ -18,20 +18,32 @@ import Card from "../../components/Card/index";
 import FlipCard from "../../components/FlipCard/index";
 import FlipCardTwo from "../../components/FlipCard2/index";
 import { CssBaseline } from "@material-ui/core";
+import GridEffect from "../../components/GridEffect/index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    marginTop: 100,
+    // flexGrow: 1,
+    // marginTop: 0,
+  },
+
+  container: {
+    marginBottom: 0,
+    overflow: "show",
   },
 
   card: {
     display: "flex",
     // maxWidth: 345,
-    marginTop: 250,
+    marginTop: 0,
+  },
+
+  card1: {
+    display: "flex",
+    // maxWidth: 345,
+    marginTop: 180,
   },
   media: {
-    height: 240,
+    height: 140,
   },
   paper: {
     padding: theme.spacing(2),
@@ -63,16 +75,17 @@ function Landing() {
     <Router>
       <div className={classes.root}>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
-            <FlipCard />
+          <Grid item xs={12} sm={12} className={classes.card1}>
+            {" "}
+            <GridEffect />
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <FlipCardTwo />
-          </Grid>
+
+          <Grid item xs={6} sm={0}></Grid>
+
+          <div className={classes.card1}>
+            <Card />
+          </div>
         </Grid>
-        <div className={classes.card}>
-          <Card />
-        </div>
       </div>
     </Router>
   );
