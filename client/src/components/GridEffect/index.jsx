@@ -10,7 +10,7 @@ import "./styles.css";
 function GridEffect() {
   // Hook1: Tie media queries to the number of columns
   const columns = useMedia(
-    ["(min-width: 5000px)", "(min-width: 3000px)", "(min-width: 1500px)"],
+    ["(min-width: 2000px)", "(min-width: 3000px)", "(min-width: 1500px)"],
     [5, 4, 3],
     2
   );
@@ -19,16 +19,16 @@ function GridEffect() {
   // Hook3: Hold items
   const [items, set] = useState(data);
   // Hook4: shuffle data every 2 seconds
-  useEffect(() => void setInterval(() => set(shuffle), 3000), []);
+  useEffect(() => void setInterval(() => set(shuffle), 2000), []);
   // Form a grid of stacked items using width & columns we got from hooks 1 & 2
   let heights = new Array(columns).fill(0); // Each column gets a height starting with zero
   let gridItems = items.map((child, i) => {
     const column = heights.indexOf(Math.min(...heights)); // Basic masonry-grid placing, puts tile into the smallest column using Math.min
     const xy = [
       (width / columns) * column,
-      (heights[column] += child.height / 2) - child.height / 2,
+      (heights[column] += child.height / 2.5) - child.height / 2.5,
     ]; // X = container width / number of columns * column index, Y = it's just the height of the current column
-    return { ...child, xy, width: width / columns, height: child.height / 2 };
+    return { ...child, xy, width: width / columns, height: child.height / 2.5 };
   });
   // Hook5: Turn the static grid values into animated transitions, any addition, removal or change will be animated
   const transitions = useTransition(gridItems, (item) => item.css, {

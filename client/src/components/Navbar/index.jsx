@@ -34,10 +34,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     fontSize: 10,
+    marginBottom: "20px"
   },
 
   font: {
     fontSize: 20,
+    color: "white"
   },
   imageLogo: {
     display: "flex",

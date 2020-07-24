@@ -33,7 +33,7 @@ function App() {
         text: "#81c784",
       },
       secondary: {
-        main: "#34cceb",
+        main: "#0E1649",
         text: "#81c784",
       },
       success: {

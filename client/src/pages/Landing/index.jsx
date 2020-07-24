@@ -22,8 +22,8 @@ import GridEffect from "../../components/GridEffect/index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // flexGrow: 1,
-    // marginTop: 0,
+    flexGrow: 1,
+    marginTop: 100,
   },
 
   container: {
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     display: "flex",
     // maxWidth: 345,
-    marginTop: 0,
+    marginTop: "100px",
   },
 
   card1: {
@@ -74,18 +74,18 @@ function Landing() {
   return (
     <Router>
       <div className={classes.root}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={12} className={classes.card1}>
-            {" "}
-            <GridEffect />
-          </Grid>
+        {/* <Grid container spacing={2}> */}
+          {/* <Grid item xs={12} sm={12} className={classes.card} > */}
+            <div className={classes.card}>
+            <GridEffect /></div>
+          {/* </Grid>
 
-          <Grid item xs={6} sm={0}></Grid>
+          <Grid item xs={6} sm={0}></Grid> */}
 
-          <div className={classes.card1}>
+          {/* <div >
             <Card />
-          </div>
-        </Grid>
+          </div> */}
+        {/* </Grid> */}
       </div>
     </Router>
   );
