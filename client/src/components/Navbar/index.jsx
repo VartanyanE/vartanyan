@@ -211,12 +211,15 @@ const PersistentDrawerRight = (props) => {
                 <h3 className="cd-headline clip is-full-width">
                   <span className="cd-words-wrapper">
                     <b className="is-visible"></b>
-                    <b className={classes.font}>Hello</b>
-                    <b className={classes.font}>I am Emanuil Vartanyan</b>
-                    <b className={classes.font}>I am a software engineer</b>
-                    <b className={classes.font}>Specialize in the MERN stack</b>
-                    <b className={classes.font}></b>
-                    <b className={classes.font}></b>
+                    <b className={classes.font}>HTML</b>
+                    <b className={classes.font}>CSS</b>
+                    <b className={classes.font}>JAVASCRIPT</b>
+                    <b className={classes.font}>NODE</b>
+                    <b className={classes.font}>EXPRESS</b>
+                    <b className={classes.font}>MYSQL</b>
+                    <b className={classes.font}>MONGODB</b>
+                    <b className={classes.font}>REACT</b>
+                    <b className={classes.font}>GIT</b>
                   </span>
                 </h3>
               </div>

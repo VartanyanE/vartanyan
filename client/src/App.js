@@ -50,11 +50,11 @@ function App() {
           <CssBaseline />
           {/* <Paper> */}
           <div>
-            <Container maxWidth="xl" disableGutters={true}>
+           
               <PersistentDrawerRight />
 
               <Route exact path="/" component={Landing} />
-            </Container>
+           
           </div>
           {/* </Paper> */}
         </ThemeProvider>
