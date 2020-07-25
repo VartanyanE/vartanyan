@@ -34,12 +34,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     fontSize: 10,
-    marginBottom: "20px"
+    marginBottom: "20px",
   },
 
   font: {
     fontSize: 20,
-    color: "white"
+    color: "white",
   },
   imageLogo: {
     display: "flex",
@@ -213,10 +213,10 @@ const PersistentDrawerRight = (props) => {
                     <b className="is-visible"></b>
                     <b className={classes.font}>Hello</b>
                     <b className={classes.font}>I am Emanuil Vartanyan</b>
-                    <b className={classes.font}>I am a full-stack developer</b>
-                    <b className={classes.font}>Interact with my portfolio</b>
-                    <b className={classes.font}>No really</b>
-                    <b className={classes.font}>Everything is interactive</b>
+                    <b className={classes.font}>I am a software engineer</b>
+                    <b className={classes.font}>Specialize in the MERN stack</b>
+                    <b className={classes.font}></b>
+                    <b className={classes.font}></b>
                   </span>
                 </h3>
               </div>
