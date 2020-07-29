@@ -20,6 +20,7 @@ import FlipCardTwo from "../../components/FlipCard2/index";
 import { CssBaseline } from "@material-ui/core";
 import GridEffect from "../../components/GridEffect/index";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import MenuIcon from "@material-ui/icons/Menu";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -34,6 +35,11 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     position: "relative"
     
+  },
+
+  font: {
+    fontSize: 20,
+    color: "white",
   },
 
   root1: {
@@ -102,42 +108,113 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const ToggleMenu = () => {
+  useEffect(() => {
+    setToggle(!isToggled);
+  }, []);
+
+  const [isToggled, setToggle] = useState(false);
+  const fade = useSpring({
+    transform: isToggled
+      ? `translate3d(0,0,0) scale(1)`
+      : `translate3d(0,-300%,0) scale(-0.5) `,
+  });
+
+  return (
+    <animated.div style={fade}>
+      <MenuIcon />
+    </animated.div>
+  );
+};
+
 function Landing() {
   const classes = useStyles();
-  const matches = useMediaQuery('(min-width:600px)');
+  
   //   const { imageCard } = useContext(ImageCardContext);
 
   return (
-    <Router>
-      <div className={matches ? classes.root : classes.root1}>
-    <div className={classes.one}>
 
-    <GridEffect />
+    <div className="container">
+    <div className="pimg1">
+        <div className="ptext">
+          <span className="menubox">
+
+          <ToggleMenu />
+          </span>
+          <span className="textbox">
+          <div className="heading">
+                <h3 className="cd-headline clip is-full-width">
+                  <span className="cd-words-wrapper">
+                    <b className="is-visible"></b>
+                    <b className={classes.font}>HTML</b>
+                    <b className={classes.font}>CSS</b>
+                    <b className={classes.font}>JAVASCRIPT</b>
+                    <b className={classes.font}>NODE</b>
+                    <b className={classes.font}>EXPRESS</b>
+                    <b className={classes.font}>MYSQL</b>
+                    <b className={classes.font}>MONGODB</b>
+                    <b className={classes.font}>REACT</b>
+                    <b className={classes.font}>GIT</b>
+                  </span>
+                </h3>
+              </div>
+</span>
+
+        </div>
 
 
     </div>
 
-    <div className={classes.two}>
+    <section className="section section-light">
+      <h2>Section One</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas veritatis ad corrupti nihil cupiditate minima nobis aliquam dignissimos a atque eveniet quia, officia ipsum ipsa saepe ex voluptatibus rem in culpa vitae quisquam rerum. Quaerat labore consequuntur ea magni debitis. Accusantium tempore architecto nostrum commodi mollitia nisi doloremque animi autem consequatur vitae rem illo ullam totam iusto facere quo inventore natus nesciunt veniam, hic repellendus earum saepe. Animi blanditiis dolores a reprehenderit aliquid error iure eum optio voluptatum at consequatur magnam, minus odit in beatae! Rem ad pariatur qui quaerat ea incidunt maxime enim excepturi laboriosam? Beatae quis itaque sint!</p>
+    </section>
 
-<p>Hello</p>
+    <div className="pimg2">
+        <div className="ptext">
+          <span className="textbox">
+
+              Image Two Text
+          </span>
+
+        </div>
 
 
-</div>
+    </div>
 
-        {/* <Grid container spacing={2}> */}
-          {/* <Grid item xs={12} sm={12} className={classes.card} > */}
-            {/* <div className={classes.card}> */}
-            {/* <GridEffect /></div> */}
-          {/* </Grid>
+    <section className="section section-dark">
+     <FlipCard />
+    </section>
 
-          <Grid item xs={6} sm={0}></Grid> */}
+    <div className="pimg3">
+        <div className="ptext">
+          <span className="textbox">
 
-          {/* <div >
-            <Card />
-          </div> */}
-        {/* </Grid> */}
-      </div>
-    </Router>
+              Image Three Text
+          </span>
+
+        </div>
+
+
+    </div>
+
+    <section className="section section-dark">
+      <h2>Section THree</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, eum! Id, eius eveniet! Magnam veritatis maxime nostrum voluptates saepe sapiente optio debitis ex! Animi ad ducimus officia quasi recusandae, libero debitis placeat quia voluptates ea hic doloremque eligendi accusamus cum quas ullam eius? Itaque cumque minima assumenda eos ipsam nesciunt?</p>
+    </section>
+
+    <div className="pimg1">
+        <div className="ptext">
+          <span className="border">
+
+              Parallex Website
+          </span>
+
+        </div>
+
+</div></div>
+ 
+
   );
 }
 

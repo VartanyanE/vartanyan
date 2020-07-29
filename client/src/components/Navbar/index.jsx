@@ -192,8 +192,8 @@ const PersistentDrawerRight = (props) => {
   };
 
   return (
-    <div className={classes.root}>
-      <CssBaseline />
+    <>
+     
       <AppBar
         style={{ backgroundColor: theme.palette.secondary.main }}
         position="fixed"
@@ -201,7 +201,7 @@ const PersistentDrawerRight = (props) => {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar disableGutters={true}>
+        <Toolbar disableGutters={false}>
           {/* <Typography style={{ flexGrow: 1 }} variant="h5">
             ABA SIGNS
           </Typography> */}
@@ -277,7 +277,7 @@ const PersistentDrawerRight = (props) => {
         </List>
         <Divider />
       </Drawer>
-    </div>
+    </>
   );
 };
 
