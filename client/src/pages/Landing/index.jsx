@@ -4,7 +4,7 @@ import bg from "../../images/background.jpg";
 // import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 // import ImgMediaCard from "../components/Card";
-// import Button from "@material-ui/core/Button";
+import Button from "@material-ui/core/Button";
 import { BrowserRouter as Router } from "react-router-dom";
 // import About from "../pages/About";
 // import Icon from "@material-ui/core/Icon";
@@ -21,6 +21,7 @@ import { CssBaseline } from "@material-ui/core";
 import GridEffect from "../../components/GridEffect/index";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import MenuIcon from "@material-ui/icons/Menu";
+import Navbar from "../../components/Navbar/index"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -109,9 +110,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ToggleMenu = () => {
-  useEffect(() => {
-    setToggle(!isToggled);
-  }, []);
+  // useEffect(() => {
+  //   setToggle(!isToggled);
+  // }, []);
 
   const [isToggled, setToggle] = useState(false);
   const fade = useSpring({
@@ -129,17 +130,31 @@ const ToggleMenu = () => {
 
 function Landing() {
   const classes = useStyles();
+  const [isNavOpen, setNavOpen] = useState(false);
+  const navAnimation = useSpring({
+    transform: isNavOpen ? `tranlate3d(0,0,0) scale(1)` : `translate3d(100%,0,0) scale(0.6)`
+  })
+  const fade = useSpring ({
+
+    from : {
+      opacity:0
+    },
+    opacity:1
+  });
   
   //   const { imageCard } = useContext(ImageCardContext);
 
   return (
-
+   
     <div className="container">
+  
     <div className="pimg1">
+    
         <div className="ptext">
+        { isNavOpen ? <Navbar style={navAnimation} /> : " "}
           <span className="menubox">
-
-          <ToggleMenu />
+          <button onClick={() => setNavOpen(!isNavOpen)} className="menu-button">Menu </button>
+          
           </span>
           <span className="textbox">
           <div className="heading">

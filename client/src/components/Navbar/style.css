@@ -1,71 +1,27 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800");
+.nav-wrapper {
+  position: fixed;
+  
+  left:0;
+  right:0;
+  top:0;
+  bottom: 0;
+  padding: 100px !important;
+  background: purple;
+  z-index:3;
+  line-height: 70px;
+}
 
-
-.cd-words-wrapper {
-  display: inline-block;
-  position: relative;
+.nav-wrapper a {
+  display: block;
   text-align: left;
-}
-
-.cd-words-wrapper b {
-  display: inline-block;
-  position: absolute;
-  white-space: nowrap;
-  left: 0;
-  top: 0;
-}
-
-.cd-words-wrapper b.is-visible {
-  position: relative;
-}
-
-.no-js .cd-words-wrapper b {
-  opacity: 0;
-}
-
-.no-js .cd-words-wrapper b.is-visible {
-  opacity: 1;
-}
-
-/* -------------------------------- 
-
-xclip 
-
--------------------------------- */
-
-.cd-headline.clip span {
-  display: inline-block;
-  padding: 0.2em 0;
+  font-size: 2rem;
   color: white;
-  font-size: 10px;
+  text-decoration: none;
+  transition: 0.3s ease border;
+  border-bottom: solid 4px transparent;
+ 
 }
 
-.cd-headline.clip span b {
-  text-transform: uppercase;
-  font-size: 10px;
-}
-
-.cd-headline.clip .cd-words-wrapper {
-  overflow: hidden;
-  vertical-align: top;
-}
-
-.cd-headline.clip .cd-words-wrapper::after {
-  /* line */
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 2px;
-  height: 80%;
-  background-color: #aebcb9;
-  font-size: 10px;
-}
-
-.cd-headline.clip b {
-  opacity: 0;
-}
-
-.cd-headline.clip b.is-visible {
-  opacity: 1;
+.nav-wrapper a:hover {
+  border-bottom: solid 4px teal;
 }

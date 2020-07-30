@@ -21,6 +21,7 @@
   background-size:cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+ 
 
 
 }
@@ -29,10 +30,21 @@
   background-repeat: no-repeat;
   min-height:100%;
   min-width: 100%;
+  
  
   
 }
 
+ .menu-button {
+   
+    z-index: 150;
+   appearance: none;
+   color: white;
+   font-weight: bold;
+   font-size: 2rem;
+   background:transparent;
+   border: none;
+ }
 
 .pimg2 {
   background-image: url(../../images/image2.jpg);
