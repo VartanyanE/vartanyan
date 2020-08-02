@@ -19,10 +19,11 @@ import FlipCard from "../../components/FlipCard/index";
 import FlipCardTwo from "../../components/FlipCard2/index";
 import { CssBaseline } from "@material-ui/core";
 import GridEffect from "../../components/GridEffect/index";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import MenuIcon from "@material-ui/icons/Menu";
-import Navbar from "../../components/Navbar/index"
-
+import Navbar from "../../components/Navbar/index";
+import ComputerRoundedIcon from "@material-ui/icons/ComputerRounded";
+import MediaCard from "../../components/Card/index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,13 +35,13 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
     height: "1200px",
     width: "100%",
-    position: "relative"
-    
+    position: "relative",
   },
 
   font: {
-    fontSize: 20,
+    fontSize: 50,
     color: "white",
+    fontFamily: " Red Rose, Arial",
   },
 
   root1: {
@@ -50,22 +51,19 @@ const useStyles = makeStyles((theme) => ({
     gridAutoRows: "min-content",
     margin: 0,
     padding: 0,
- 
+
     width: "100%",
-    position: "relative"
-    
+    position: "relative",
   },
 
-  one : {
+  one: {
     gridColumn: "1",
-    gridRow: "1"
-
+    gridRow: "1",
   },
 
-  two : {
+  two: {
     gridColumn: "2",
-    gridRow: "1"
-
+    gridRow: "1",
   },
 
   container: {
@@ -132,104 +130,92 @@ function Landing() {
   const classes = useStyles();
   const [isNavOpen, setNavOpen] = useState(false);
   const navAnimation = useSpring({
-    transform: isNavOpen ? `tranlate3d(0,0,0) scale(1)` : `translate3d(100%,0,0) scale(0.6)`
-  })
-  const fade = useSpring ({
-
-    from : {
-      opacity:0
-    },
-    opacity:1
+    transform: isNavOpen
+      ? `tranlate3d(0,0,0) scale(1)`
+      : `translate3d(100%,0,0) scale(0.6)`,
   });
-  
+  const fade = useSpring({
+    from: {
+      opacity: 0,
+    },
+    opacity: 1,
+  });
+
   //   const { imageCard } = useContext(ImageCardContext);
 
   return (
-   
     <div className="container">
-  
-    <div className="pimg1">
-    
-        <div className="ptext">
-        { isNavOpen ? <Navbar style={navAnimation} /> : " "}
-          <span className="menubox">
-          <button onClick={() => setNavOpen(!isNavOpen)} className="menu-button">Menu </button>
-          
-          </span>
-          <span className="textbox">
+      <Navbar style={navAnimation} />
+      <ComputerRoundedIcon
+        onClick={() => setNavOpen(!isNavOpen)}
+        className="menu-button"
+      />
+      <div className="pimg1">
+        <span className="textbox">
           <div className="heading">
-                <h3 className="cd-headline clip is-full-width">
-                  <span className="cd-words-wrapper">
-                    <b className="is-visible"></b>
-                    <b className={classes.font}>HTML</b>
-                    <b className={classes.font}>CSS</b>
-                    <b className={classes.font}>JAVASCRIPT</b>
-                    <b className={classes.font}>NODE</b>
-                    <b className={classes.font}>EXPRESS</b>
-                    <b className={classes.font}>MYSQL</b>
-                    <b className={classes.font}>MONGODB</b>
-                    <b className={classes.font}>REACT</b>
-                    <b className={classes.font}>GIT</b>
-                  </span>
-                </h3>
-              </div>
-</span>
+            <h3 className="cd-headline clip is-full-width">
+              <span className="cd-words-wrapper">
+                <b className="is-visible"></b>
+                <b className="effect-font">hello</b>
+                <b className="effect-font">i am emanuil vartanyan</b>
+                <b className="effect-font">i am a full stack web developer</b>
+                <b className="effect-font">mern stack</b>
+                <b className="effect-font">EXPRESS</b>
+                <b className="effect-font">MYSQL</b>
+                <b className="effect-font">MONGODB</b>
+                <b className="effect-font">REACT</b>
+                <b className="effect-font">GIT</b>
+              </span>
+            </h3>
+          </div>
+        </span>
+      </div>
 
+      <section className="section section-light projects" id="projects">
+        <div className="item1">
+          {" "}
+          <MediaCard />
         </div>
+        <div className="item2">
+          {" "}
+          <MediaCard />
+        </div>
+      </section>
 
-
-    </div>
-
-    <section className="section section-light">
-      <h2>Section One</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas veritatis ad corrupti nihil cupiditate minima nobis aliquam dignissimos a atque eveniet quia, officia ipsum ipsa saepe ex voluptatibus rem in culpa vitae quisquam rerum. Quaerat labore consequuntur ea magni debitis. Accusantium tempore architecto nostrum commodi mollitia nisi doloremque animi autem consequatur vitae rem illo ullam totam iusto facere quo inventore natus nesciunt veniam, hic repellendus earum saepe. Animi blanditiis dolores a reprehenderit aliquid error iure eum optio voluptatum at consequatur magnam, minus odit in beatae! Rem ad pariatur qui quaerat ea incidunt maxime enim excepturi laboriosam? Beatae quis itaque sint!</p>
-    </section>
-
-    <div className="pimg2">
+      <div className="pimg2">
         <div className="ptext">
-          <span className="textbox">
-
-              Image Two Text
-          </span>
-
+          <span className="textbox">Image Two Text</span>
         </div>
+      </div>
 
+      <section className="section section-dark">
+        <FlipCard />
+      </section>
 
-    </div>
-
-    <section className="section section-dark">
-     <FlipCard />
-    </section>
-
-    <div className="pimg3">
+      <div className="pimg3">
         <div className="ptext">
-          <span className="textbox">
-
-              Image Three Text
-          </span>
-
+          <span className="textbox">Image Three Text</span>
         </div>
+      </div>
 
+      <section className="section section-dark">
+        <h2>Section THree</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus,
+          eum! Id, eius eveniet! Magnam veritatis maxime nostrum voluptates
+          saepe sapiente optio debitis ex! Animi ad ducimus officia quasi
+          recusandae, libero debitis placeat quia voluptates ea hic doloremque
+          eligendi accusamus cum quas ullam eius? Itaque cumque minima assumenda
+          eos ipsam nesciunt?
+        </p>
+      </section>
 
-    </div>
-
-    <section className="section section-dark">
-      <h2>Section THree</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, eum! Id, eius eveniet! Magnam veritatis maxime nostrum voluptates saepe sapiente optio debitis ex! Animi ad ducimus officia quasi recusandae, libero debitis placeat quia voluptates ea hic doloremque eligendi accusamus cum quas ullam eius? Itaque cumque minima assumenda eos ipsam nesciunt?</p>
-    </section>
-
-    <div className="pimg1">
+      <div className="pimg1">
         <div className="ptext">
-          <span className="border">
-
-              Parallex Website
-          </span>
-
+          <span className="border">Parallex Website</span>
         </div>
-
-</div></div>
- 
-
+      </div>
+    </div>
   );
 }
 

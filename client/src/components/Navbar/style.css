@@ -1,13 +1,13 @@
 .nav-wrapper {
   position: fixed;
-  
-  left:0;
-  right:0;
-  top:0;
+
+  left: 0;
+  right: 0;
+  top: 0;
   bottom: 0;
   padding: 100px !important;
-  background: purple;
-  z-index:3;
+  background: black;
+  z-index: 3;
   line-height: 70px;
 }
 
@@ -19,7 +19,6 @@
   text-decoration: none;
   transition: 0.3s ease border;
   border-bottom: solid 4px transparent;
- 
 }
 
 .nav-wrapper a:hover {
