@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import logo from "../../images/planthood.png"
+import logo1 from "../../images/snacktrax.png"
 
 const useStyles = makeStyles({
   root: {
@@ -18,21 +18,21 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard(props) {
+export default function MediaCard1(props) {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-      <CardActionArea href="https://planthood.herokuapp.com/">
+      <CardActionArea>
         <CardMedia
           className={classes.media}
-          src={logo}
+          src={logo1}
           title="PlantHood"
           component="img"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Planthood
+            TrackSnax
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
            Planthood is an app for plant lovers. Get plant info from our API.  Organize your plants and give access to a plant sitter for when you are out of town.

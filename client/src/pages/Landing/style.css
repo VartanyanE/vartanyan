@@ -28,7 +28,7 @@
 .menu-button {
   color: white;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 10rem;
   top: 0;
   right: 50%;
 
@@ -95,14 +95,29 @@
 
 .projects {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr ;
   grid-column-gap: 50px;
 }
 
 .item1 {
+  display: flex;
+  justify-content: center;
   grid-column: 1;
+  
+}
+
+@media (max-width: 600px) {
+  .section {
+    display: flex;
+    max-width: 100%;
+    padding: 0 !important;
+    justify-content: center;
+ 
+  
+  }
 }
 .item2 {
+ 
   grid-column: 2;
 }
 @media (max-width: 1200px) {
@@ -116,6 +131,8 @@
     max-width: 100%;
   }
 }
+
+
 
 @media (max-width: 568px) {
   .pimg1,

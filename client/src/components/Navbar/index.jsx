@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import "./style.css";
 import { animated } from "react-spring";
+import HomeIcon from '@material-ui/icons/Home';
 
 const Navbar = ({ style }) => {
   return (
     <animated.div className="nav-wrapper" style={style}>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#contact">Contact</a>
-        <a href="#">Projects</a>
-      </nav>
+      
+       <HomeIcon style={{color: "white"}}/>
+    
     </animated.div>
   );
 };

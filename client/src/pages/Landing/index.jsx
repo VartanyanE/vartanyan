@@ -24,6 +24,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Navbar from "../../components/Navbar/index";
 import ComputerRoundedIcon from "@material-ui/icons/ComputerRounded";
 import MediaCard from "../../components/Card/index";
+import Card3d from "../../components/Card3d/index"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -174,12 +175,12 @@ function Landing() {
       <section className="section section-light projects" id="projects">
         <div className="item1">
           {" "}
-          <MediaCard />
-        </div>
-        <div className="item2">
+         <Card3d />
+                 </div>
+        {/* <div className="item2">
           {" "}
           <MediaCard />
-        </div>
+        </div> */}
       </section>
 
       <div className="pimg2">
@@ -189,7 +190,7 @@ function Landing() {
       </div>
 
       <section className="section section-dark">
-        <FlipCard />
+        
       </section>
 
       <div className="pimg3">
