@@ -13,7 +13,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 // import CardComp from "../../components/Card";
 // import ImageCardContext from "../../utils/ImageCardContext";
 import "./style.css";
-import { useTransition, animated, useSpring } from "react-spring";
+import { useTransition, animated, useSpring, config } from "react-spring";
 import Card from "../../components/Card/index";
 import FlipCard from "../../components/FlipCard/index";
 import FlipCardTwo from "../../components/FlipCard2/index";
@@ -24,7 +24,8 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Navbar from "../../components/Navbar/index";
 import ComputerRoundedIcon from "@material-ui/icons/ComputerRounded";
 import MediaCard from "../../components/Card/index";
-import Card3d from "../../components/Card3d/index"
+import Card3d from "../../components/Card3d/index";
+import { Waypoint } from "react-waypoint";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -130,6 +131,13 @@ const ToggleMenu = () => {
 function Landing() {
   const classes = useStyles();
   const [isNavOpen, setNavOpen] = useState(false);
+  const [on, toggle] = useState(false);
+  const animation = useSpring({
+    opacity: on ? 1 : 0,
+    transform: on ? `tranlate3d(0,0,0)` : `translate3d(1000%,0,0)`,
+    config: config.slow,
+  });
+
   const navAnimation = useSpring({
     transform: isNavOpen
       ? `tranlate3d(0,0,0) scale(1)`
@@ -174,9 +182,12 @@ function Landing() {
 
       <section className="section section-light projects" id="projects">
         <div className="item1">
-          {" "}
-         <Card3d />
-                 </div>
+          <Waypoint onEnter={() => toggle(true)} />
+
+          <animated.div style={animation}>
+            <Card3d />
+          </animated.div>
+        </div>
         {/* <div className="item2">
           {" "}
           <MediaCard />
@@ -189,9 +200,7 @@ function Landing() {
         </div>
       </div>
 
-      <section className="section section-dark">
-        
-      </section>
+      <section className="section section-dark"></section>
 
       <div className="pimg3">
         <div className="ptext">
