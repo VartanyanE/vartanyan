@@ -26,6 +26,7 @@ import ComputerRoundedIcon from "@material-ui/icons/ComputerRounded";
 import MediaCard from "../../components/Card/index";
 import Card3d from "../../components/Card3d/index";
 import { Waypoint } from "react-waypoint";
+import SimpleCard from "../../components/Card"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -159,7 +160,7 @@ function Landing() {
         onClick={() => setNavOpen(!isNavOpen)}
         className="menu-button"
       />
-      <div className="pimg1">
+      <div className="pimg1"> <GridEffect />
         <span className="textbox">
           <div className="heading">
             <h3 className="cd-headline clip is-full-width">
@@ -168,7 +169,7 @@ function Landing() {
                 <b className="effect-font">hello</b>
                 <b className="effect-font">i am emanuil vartanyan</b>
                 <b className="effect-font">i am a full stack web developer</b>
-                <b className="effect-font">mern stack</b>
+                <b className="effect-font">i specialize in the mern stack</b>
                 <b className="effect-font">EXPRESS</b>
                 <b className="effect-font">MYSQL</b>
                 <b className="effect-font">MONGODB</b>
@@ -185,7 +186,7 @@ function Landing() {
           <Waypoint onEnter={() => toggle(true)} />
 
           <animated.div style={animation}>
-            <Card3d />
+           <SimpleCard />
           </animated.div>
         </div>
         {/* <div className="item2">
@@ -193,7 +194,20 @@ function Landing() {
           <MediaCard />
         </div> */}
       </section>
+      <section className="section section-light projects" id="projects">
+        <div className="item1">
+          <Waypoint onEnter={() => toggle(true)} />
 
+          <animated.div style={animation}>
+             <Card3d />
+          </animated.div>
+        </div>
+        {/* <div className="item2">
+          {" "}
+          <MediaCard />
+        </div> */}
+      </section>
+{/* 
       <div className="pimg2">
         <div className="ptext">
           <span className="textbox">Image Two Text</span>
@@ -206,18 +220,10 @@ function Landing() {
         <div className="ptext">
           <span className="textbox">Image Three Text</span>
         </div>
-      </div>
+      </div> */}
 
       <section className="section section-dark">
-        <h2>Section THree</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus,
-          eum! Id, eius eveniet! Magnam veritatis maxime nostrum voluptates
-          saepe sapiente optio debitis ex! Animi ad ducimus officia quasi
-          recusandae, libero debitis placeat quia voluptates ea hic doloremque
-          eligendi accusamus cum quas ullam eius? Itaque cumque minima assumenda
-          eos ipsam nesciunt?
-        </p>
+      
       </section>
 
       <div className="pimg1">

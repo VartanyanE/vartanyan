@@ -23,13 +23,8 @@ export default function MediaCard(props) {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea href="https://planthood.herokuapp.com/">
-        <CardMedia
-          className={classes.media}
-          src={logo}
-          title="PlantHood"
-          component="img"
-        />
+     
+        
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             Planthood
@@ -38,7 +33,7 @@ export default function MediaCard(props) {
            Planthood is an app for plant lovers. Get plant info from our API.  Organize your plants and give access to a plant sitter for when you are out of town.
           </Typography>
         </CardContent>
-      </CardActionArea>
+     
      
     </Card>
   );

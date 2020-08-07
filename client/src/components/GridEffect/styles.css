@@ -24,14 +24,14 @@ body,
   position: relative;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-  width: 140px;
-  height: 100%;
+  width: 150px;
+  height: 150px;
 }
 
 .list > div {
   position: absolute;
   will-change: transform, width, height, opacity;
-  padding: 15px;
+  padding: 8px !important;
 }
 
 .list > div > div {
