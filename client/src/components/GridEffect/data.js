@@ -1,7 +1,7 @@
 import gridImage from "../../images/css.png";
 import gridImage1 from "../../images/html.png";
 import gridImage2 from "../../images/javascript.png";
-import gridImage3 from "../../images/node.png";
+import gridImage3 from "../../images/nodejs.png";
 import gridImage4 from "../../images/react.png";
 import gridImage5 from "../../images/mongodb.png";
 

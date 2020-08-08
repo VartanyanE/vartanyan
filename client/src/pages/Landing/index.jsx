@@ -135,7 +135,13 @@ function Landing() {
   const [on, toggle] = useState(false);
   const animation = useSpring({
     opacity: on ? 1 : 0,
-    transform: on ? `tranlate3d(0,0,0)` : `translate3d(1000%,0,0)`,
+    transform: on ? `tranlate3d(0,0,0)` : `translate3d(-1000%, 0,0)`,
+    config: config.slow,
+  });
+
+  const animation1 = useSpring({
+    opacity: on ? 1 : 0,
+    transform: on ? `tranlate3d(0,0,0)` : `translate3d(1000%, 0,0)`,
     config: config.slow,
   });
 
@@ -156,28 +162,25 @@ function Landing() {
   return (
     <div className="container">
       <Navbar style={navAnimation} />
-      <ComputerRoundedIcon
+      {/* <ComputerRoundedIcon
         onClick={() => setNavOpen(!isNavOpen)}
         className="menu-button"
-      />
-      <div className="pimg1"> <GridEffect />
-        <span className="textbox">
-          <div className="heading">
+      /> */}
+      <div className="pimg1"><div className="heading">
             <h3 className="cd-headline clip is-full-width">
               <span className="cd-words-wrapper">
                 <b className="is-visible"></b>
                 <b className="effect-font">hello</b>
                 <b className="effect-font">i am emanuil vartanyan</b>
-                <b className="effect-font">i am a full stack web developer</b>
+                <b className="effect-font">i am a full stack engineer</b>
                 <b className="effect-font">i specialize in the mern stack</b>
-                <b className="effect-font">EXPRESS</b>
-                <b className="effect-font">MYSQL</b>
-                <b className="effect-font">MONGODB</b>
-                <b className="effect-font">REACT</b>
-                <b className="effect-font">GIT</b>
+                <b className="effect-font">react developer</b>
+               
               </span>
             </h3>
           </div>
+        <span className="textbox"> <GridEffect />
+          
         </span>
       </div>
 
@@ -198,7 +201,7 @@ function Landing() {
         <div className="item1">
           <Waypoint onEnter={() => toggle(true)} />
 
-          <animated.div style={animation}>
+          <animated.div style={animation1}>
              <Card3d />
           </animated.div>
         </div>
@@ -222,7 +225,7 @@ function Landing() {
         </div>
       </div> */}
 
-      <section className="section section-dark">
+      {/* <section className="section section-dark">
       
       </section>
 
@@ -230,7 +233,7 @@ function Landing() {
         <div className="ptext">
           <span className="border">Parallex Website</span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

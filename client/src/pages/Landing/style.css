@@ -83,7 +83,9 @@
 }
 
 .textbox {
-  top: 50%;
+  display: flex;
+  justify-content: center;
+  top: 30%;
   width: 100%;
 
   position: absolute;
