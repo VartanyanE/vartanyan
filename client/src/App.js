@@ -3,7 +3,6 @@ import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 
-
 import Container from "@material-ui/core/Container";
 import Landing from "./pages/Landing";
 // import About from "./pages/About";
@@ -44,31 +43,23 @@ function App() {
     },
   });
 
-//   const GlobalStyle = createGlobalStyle`
-//   body {
-//     margin: 0;
-//     padding: 0;
-//   }
-// `
-
+  //   const GlobalStyle = createGlobalStyle`
+  //   body {
+  //     margin: 0;
+  //     padding: 0;
+  //   }
+  // `
 
   return (
     <Router>
-      
       {/* <Switch> */}
       <ModeContext.Provider value={{ darkMode, setDarkMode }}>
         <ThemeProvider theme={theme}>
-         
           {/* <Paper> */}
-         <>
-          
-              
-           
-              <Landing />
-           
+          <>
+            <Landing />
           </>
           {/* </Paper> */}
-        
         </ThemeProvider>
       </ModeContext.Provider>
       {/* </Switch> */}

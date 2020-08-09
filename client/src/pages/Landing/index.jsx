@@ -25,8 +25,10 @@ import Navbar from "../../components/Navbar/index";
 import ComputerRoundedIcon from "@material-ui/icons/ComputerRounded";
 import MediaCard from "../../components/Card/index";
 import Card3d from "../../components/Card3d/index";
+import Card3dPlanthood from "../../components/Card/index";
 import { Waypoint } from "react-waypoint";
-import SimpleCard from "../../components/Card"
+import SimpleCard from "../../components/Card";
+import Contact from "../../components/Contact/index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -166,21 +168,22 @@ function Landing() {
         onClick={() => setNavOpen(!isNavOpen)}
         className="menu-button"
       /> */}
-      <div className="pimg1"><div className="heading">
-            <h3 className="cd-headline clip is-full-width">
-              <span className="cd-words-wrapper">
-                <b className="is-visible"></b>
-                <b className="effect-font">hello</b>
-                <b className="effect-font">i am emanuil vartanyan</b>
-                <b className="effect-font">i am a full stack engineer</b>
-                <b className="effect-font">i specialize in the mern stack</b>
-                <b className="effect-font">react developer</b>
-               
-              </span>
-            </h3>
-          </div>
-        <span className="textbox"> <GridEffect />
-          
+      <div className="pimg1">
+        <div className="heading">
+          <h3 className="cd-headline clip is-full-width">
+            <span className="cd-words-wrapper">
+              <b className="is-visible"></b>
+              <b className="effect-font">hello</b>
+              <b className="effect-font">i am emanuil vartanyan</b>
+              <b className="effect-font">i am a full stack engineer</b>
+              <b className="effect-font">i specialize in the mern stack</b>
+              <b className="effect-font">react developer</b>
+            </span>
+          </h3>
+        </div>
+        <span className="textbox">
+          {" "}
+          <GridEffect />
         </span>
       </div>
 
@@ -189,7 +192,7 @@ function Landing() {
           <Waypoint onEnter={() => toggle(true)} />
 
           <animated.div style={animation}>
-           <SimpleCard />
+            <Card3dPlanthood />
           </animated.div>
         </div>
         {/* <div className="item2">
@@ -202,7 +205,7 @@ function Landing() {
           <Waypoint onEnter={() => toggle(true)} />
 
           <animated.div style={animation1}>
-             <Card3d />
+            <Card3d />
           </animated.div>
         </div>
         {/* <div className="item2">
@@ -210,20 +213,22 @@ function Landing() {
           <MediaCard />
         </div> */}
       </section>
-{/* 
-      <div className="pimg2">
+
+      {/* <div className="pimg2">
         <div className="ptext">
           <span className="textbox">Image Two Text</span>
         </div>
-      </div>
-
-      <section className="section section-dark"></section>
-
-      <div className="pimg3">
-        <div className="ptext">
-          <span className="textbox">Image Three Text</span>
-        </div>
       </div> */}
+
+      {/* <section className="section section-dark"></section> */}
+
+      <div className="pimg1">
+        <div className="ptext">
+          <span className="textbox">
+            <Contact />
+          </span>
+        </div>
+      </div>
 
       {/* <section className="section section-dark">
       
