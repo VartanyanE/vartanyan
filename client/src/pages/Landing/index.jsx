@@ -29,6 +29,8 @@ import Card3dPlanthood from "../../components/Card/index";
 import { Waypoint } from "react-waypoint";
 import SimpleCard from "../../components/Card";
 import Contact from "../../components/Contact/index";
+import AccountBoxRoundedIcon from "@material-ui/icons/AccountBoxRounded";
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -134,6 +136,7 @@ const ToggleMenu = () => {
 function Landing() {
   const classes = useStyles();
   const [isNavOpen, setNavOpen] = useState(false);
+  const [isAboutOpen, setAboutOpen] = useState(false);
   const [on, toggle] = useState(false);
   const animation = useSpring({
     opacity: on ? 1 : 0,
@@ -152,6 +155,10 @@ function Landing() {
       ? `tranlate3d(0,0,0) scale(1)`
       : `translate3d(100%,0,0) scale(0.6)`,
   });
+  const aboutAnimation = useSpring({
+    transform: isAboutOpen ? `tranlate3d(0,0,0)` : `translate3d(100%,0,0)`,
+  });
+
   const fade = useSpring({
     from: {
       opacity: 0,
@@ -168,7 +175,14 @@ function Landing() {
         onClick={() => setNavOpen(!isNavOpen)}
         className="menu-button"
       /> */}
+
       <div className="pimg1">
+        {" "}
+        <div className="aboutIcon">
+          <IconButton>
+            <AccountBoxRoundedIcon onClick={() => setAboutOpen(!isAboutOpen)} />
+          </IconButton>
+        </div>
         <div className="heading">
           <h3 className="cd-headline clip is-full-width">
             <span className="cd-words-wrapper">
