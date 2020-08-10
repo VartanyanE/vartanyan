@@ -31,7 +31,7 @@ import SimpleCard from "../../components/Card";
 import Contact from "../../components/Contact/index";
 import AccountBoxRoundedIcon from "@material-ui/icons/AccountBoxRounded";
 import IconButton from "@material-ui/core/IconButton";
-
+import AboutCard from "../../components/About/index";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "grid",
@@ -156,7 +156,7 @@ function Landing() {
       : `translate3d(100%,0,0) scale(0.6)`,
   });
   const aboutAnimation = useSpring({
-    transform: isAboutOpen ? `tranlate3d(0,0,0)` : `translate3d(100%,0,0)`,
+    transform: isAboutOpen ? `tranlate3d(0,0,0)` : `translate3d(-500px,0,0)`,
   });
 
   const fade = useSpring({
@@ -194,6 +194,7 @@ function Landing() {
               <b className="effect-font">react developer</b>
             </span>
           </h3>
+          <AboutCard style={aboutAnimation} />
         </div>
         <span className="textbox">
           {" "}
