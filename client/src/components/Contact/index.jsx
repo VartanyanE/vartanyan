@@ -9,6 +9,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { useTransition, animated, useSpring, config } from "react-spring";
 import AddToHomeScreenIcon from "@material-ui/icons/AddToHomeScreen";
 import IconButton from "@material-ui/core/IconButton";
+import SendIcon from "@material-ui/icons/Send";
+import "./style.css";
 // toast.configure();
 
 const useStyles = makeStyles((theme) => ({
@@ -25,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   itemCenter: {
     display: "flex",
     justifyContent: "center",
+    marginBottom: "20px !important",
 
     alignItems: "center",
   },
@@ -35,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 
   messageInput: {
     height: "80px",
-    backgroundColor: "black",
+    backgroundColor: "white",
     borderRadius: "10px",
   },
 
@@ -52,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
   buttonSize: {
     height: "20px",
     width: "20px",
+  },
+  button: {
+    padding: "20px",
   },
 }));
 
@@ -101,7 +107,7 @@ function Contact() {
       <Grid container spacing={0} style={{ marginTop: "100px" }}>
         <Grid item xs={3}></Grid>
         <Grid item xs={6} className={classes.itemCenter}>
-          <h3>Say Hello</h3>
+          <h3>Contact Form</h3>
         </Grid>
         <Grid item xs={3}></Grid>
         <Grid item xs={12} className={classes.paper}>
@@ -131,13 +137,15 @@ function Contact() {
               className={classes.messageInput}
             />
             <br />
-            <IconButton
-              className={classes.buttonSize}
-              aria-label="delete"
+            <Button
+              className="send-button"
+              variant="contained"
+              color="secondary"
               type="submit"
+              startIcon={<SendIcon />}
             >
-              <AddToHomeScreenIcon />
-            </IconButton>
+              Send
+            </Button>
           </form>
           <animated.h5 className={classes.messageSucces} style={animation}>
             Got it! Will get back to you ASAP!

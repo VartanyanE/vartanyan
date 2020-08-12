@@ -17,7 +17,7 @@ import { useTransition, animated, useSpring, config } from "react-spring";
 import Card from "../../components/Card/index";
 import FlipCard from "../../components/FlipCard/index";
 import FlipCardTwo from "../../components/FlipCard2/index";
-import { CssBaseline } from "@material-ui/core";
+import { CssBaseline, Tooltip } from "@material-ui/core";
 import GridEffect from "../../components/GridEffect/index";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -32,6 +32,8 @@ import Contact from "../../components/Contact/index";
 import AccountBoxRoundedIcon from "@material-ui/icons/AccountBoxRounded";
 import IconButton from "@material-ui/core/IconButton";
 import AboutCard from "../../components/About/index";
+import DeckIcon from "@material-ui/icons/Deck";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "grid",
@@ -133,7 +135,8 @@ const ToggleMenu = () => {
   );
 };
 
-function Landing() {
+function Landing(props) {
+  console.log(props);
   const classes = useStyles();
   const [isNavOpen, setNavOpen] = useState(false);
   const [isAboutOpen, setAboutOpen] = useState(false);
@@ -179,11 +182,22 @@ function Landing() {
       <div className="pimg1">
         {" "}
         <div className="aboutIcon">
-          <IconButton>
-            <AccountBoxRoundedIcon onClick={() => setAboutOpen(!isAboutOpen)} />
-          </IconButton>
+          <Tooltip title="Info" placement="right">
+            <IconButton href="#projects" aria-label="Home" aria-haspopup="true">
+              <AccountBoxRoundedIcon
+                onClick={() => setAboutOpen(!isAboutOpen)}
+              />
+            </IconButton>
+          </Tooltip>
         </div>
-        <div className="heading">
+        <div className="homeIcon">
+          <Tooltip title="Home" placement="right">
+            <IconButton href="#homeIcon">
+              <DeckIcon />
+            </IconButton>
+          </Tooltip>
+        </div>
+        <div className="heading" id="homeIcon">
           <h3 className="cd-headline clip is-full-width">
             <span className="cd-words-wrapper">
               <b className="is-visible"></b>
