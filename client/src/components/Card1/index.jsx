@@ -7,18 +7,18 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import logo1 from "../../images/snacktrax.png"
+import logo1 from "../../images/snacktrax.png";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 800,
   },
   media: {
     height: 140,
   },
 });
 
-export default function MediaCard1(props) {
+export default function Card1(props) {
   const classes = useStyles();
 
   return (
@@ -32,14 +32,13 @@ export default function MediaCard1(props) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            TrackSnax
+            Emanuil Vartanyan
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-           Planthood is an app for plant lovers. Get plant info from our API.  Organize your plants and give access to a plant sitter for when you are out of town.
+            Graduate of the UCLA Extension Full Stack Web Developer Bootcamp
           </Typography>
         </CardContent>
       </CardActionArea>
-     
     </Card>
   );
 }

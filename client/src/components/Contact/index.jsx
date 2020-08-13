@@ -38,8 +38,9 @@ const useStyles = makeStyles((theme) => ({
 
   messageInput: {
     height: "80px",
-    backgroundColor: "white",
+    backgroundColor: "#FBFBEF !important",
     borderRadius: "10px",
+    fontSize: "20px",
   },
 
   messageSucces: {
@@ -47,9 +48,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   input: {
-    backgroundColor: "black",
+    backgroundColor: "#FBFBEF !important",
     borderRadius: "10px",
     marginBottom: "6px !important",
+    fontSize: "20px",
   },
 
   buttonSize: {

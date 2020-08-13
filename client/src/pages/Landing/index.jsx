@@ -33,6 +33,7 @@ import AccountBoxRoundedIcon from "@material-ui/icons/AccountBoxRounded";
 import IconButton from "@material-ui/core/IconButton";
 import AboutCard from "../../components/About/index";
 import DeckIcon from "@material-ui/icons/Deck";
+import Card1 from "../../components/Card1/index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -169,24 +170,16 @@ function Landing(props) {
     opacity: 1,
   });
 
-  //   const { imageCard } = useContext(ImageCardContext);
-
   return (
     <div className="container">
       <Navbar style={navAnimation} />
-      {/* <ComputerRoundedIcon
-        onClick={() => setNavOpen(!isNavOpen)}
-        className="menu-button"
-      /> */}
 
       <div className="pimg1">
         {" "}
         <div className="aboutIcon">
           <Tooltip title="Info" placement="right">
             <IconButton href="#projects" aria-label="Home" aria-haspopup="true">
-              <AccountBoxRoundedIcon
-                onClick={() => setAboutOpen(!isAboutOpen)}
-              />
+              <AccountBoxRoundedIcon />
             </IconButton>
           </Tooltip>
         </div>
@@ -224,12 +217,8 @@ function Landing(props) {
             <Card3dPlanthood />
           </animated.div>
         </div>
-        {/* <div className="item2">
-          {" "}
-          <MediaCard />
-        </div> */}
       </section>
-      <section className="section section-light projects" id="projects">
+      <section className="section section-light info" id="projects">
         <div className="item1">
           <Waypoint onEnter={() => toggle(true)} />
 
@@ -237,37 +226,34 @@ function Landing(props) {
             <Card3d />
           </animated.div>
         </div>
-        {/* <div className="item2">
-          {" "}
-          <MediaCard />
-        </div> */}
+      </section>
+      <section className="section section-light projects" id="info">
+        <div className="item1">
+          <Waypoint onEnter={() => toggle(true)} />
+
+          <animated.div style={animation1}> </animated.div>
+        </div>
       </section>
 
-      {/* <div className="pimg2">
-        <div className="ptext">
-          <span className="textbox">Image Two Text</span>
+      <div className="pimg2">
+        <div className="aboutIcon">
+          <Tooltip title="Info" placement="right">
+            <IconButton href="#projects" aria-label="Home" aria-haspopup="true">
+              <AccountBoxRoundedIcon />
+            </IconButton>
+          </Tooltip>
         </div>
-      </div> */}
-
-      {/* <section className="section section-dark"></section> */}
-
-      <div className="pimg1">
-        <div className="ptext">
-          <span className="textbox">
-            <Contact />
-          </span>
+        <div className="homeIcon">
+          <Tooltip title="Home" placement="right">
+            <IconButton href="#homeIcon">
+              <DeckIcon />
+            </IconButton>
+          </Tooltip>
         </div>
+        <span className="textbox">
+          <Contact />
+        </span>
       </div>
-
-      {/* <section className="section section-dark">
-      
-      </section>
-
-      <div className="pimg1">
-        <div className="ptext">
-          <span className="border">Parallex Website</span>
-        </div>
-      </div> */}
     </div>
   );
 }
