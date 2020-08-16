@@ -4,14 +4,14 @@ import { makeStyles } from "@material-ui/core/styles";
 // import { BrowserRouter as Router } from "react-router-dom";
 import { Paper, Grid, Button } from "@material-ui/core";
 import { useForm } from "react-hook-form";
-// import { toast, ToastContainer, Zoom, Bounce } from "react-toastify";
+import { toast, ToastContainer, Zoom, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTransition, animated, useSpring, config } from "react-spring";
 import AddToHomeScreenIcon from "@material-ui/icons/AddToHomeScreen";
 import IconButton from "@material-ui/core/IconButton";
 import SendIcon from "@material-ui/icons/Send";
 import "./style.css";
-// toast.configure();
+toast.configure();
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     marginBottom: "20px !important",
+    fontFamily: "Alata sans-serif",
 
     alignItems: "center",
   },
@@ -41,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FBFBEF !important",
     borderRadius: "10px",
     fontSize: "20px",
+    fontFamily: "Alata sans-serif",
   },
 
   messageSucces: {
@@ -52,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
     marginBottom: "6px !important",
     fontSize: "20px",
+    fontFamily: "Alata sans-serif",
   },
 
   buttonSize: {
@@ -92,11 +95,12 @@ function Contact() {
       data: data,
     }).then((response) => {
       if (response.data.msg === "success") {
-        toggle(true);
+        toast("Message Sent!");
+        // toggle(true);
 
-        setTimeout(function () {
-          messageClear();
-        }, 5000);
+        // setTimeout(function () {
+        //   messageClear();
+        // }, 5000);
         event.target.reset();
       } else if (response.data.msg === "fail") {
         alert("Message failed to send.");
@@ -105,11 +109,14 @@ function Contact() {
   };
 
   return (
-    <div className={classes.root}>
+    <animated.div className={classes.root}>
       <Grid container spacing={0} style={{ marginTop: "100px" }}>
         <Grid item xs={3}></Grid>
         <Grid item xs={6} className={classes.itemCenter}>
-          <h3>Contact Form</h3>
+          <strong>
+            {" "}
+            <h3>Contact Form</h3>
+          </strong>
         </Grid>
         <Grid item xs={3}></Grid>
         <Grid item xs={12} className={classes.paper}>
@@ -154,7 +161,7 @@ function Contact() {
           </animated.h5>
         </Grid>
       </Grid>
-    </div>
+    </animated.div>
   );
 }
 

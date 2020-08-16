@@ -34,6 +34,7 @@ import IconButton from "@material-ui/core/IconButton";
 import AboutCard from "../../components/About/index";
 import DeckIcon from "@material-ui/icons/Deck";
 import Card1 from "../../components/Card1/index";
+import LaptopMacIcon from "@material-ui/icons/LaptopMac";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -141,6 +142,7 @@ function Landing(props) {
   const classes = useStyles();
   const [isNavOpen, setNavOpen] = useState(false);
   const [isAboutOpen, setAboutOpen] = useState(false);
+  const [isContactOpen, setContactOpen] = useState(false);
   const [on, toggle] = useState(false);
   const animation = useSpring({
     opacity: on ? 1 : 0,
@@ -164,10 +166,10 @@ function Landing(props) {
   });
 
   const fade = useSpring({
-    from: {
-      opacity: 0,
-    },
-    opacity: 1,
+    transform: isContactOpen
+      ? `tranlate3d(0,0,0) scale(1)`
+      : `translate3d(0,0,0) scale(0.1)`,
+    config: config.slow,
   });
 
   return (
@@ -187,6 +189,13 @@ function Landing(props) {
           <Tooltip title="Home" placement="right">
             <IconButton href="#homeIcon">
               <DeckIcon />
+            </IconButton>
+          </Tooltip>
+        </div>
+        <div className="projectsIcon">
+          <Tooltip title="Projects" placement="right">
+            <IconButton href="#projects">
+              <LaptopMacIcon />
             </IconButton>
           </Tooltip>
         </div>
@@ -237,8 +246,8 @@ function Landing(props) {
 
       <div className="pimg2">
         <div className="aboutIcon">
-          <Tooltip title="Info" placement="right">
-            <IconButton href="#projects" aria-label="Home" aria-haspopup="true">
+          <Tooltip title="Contact" placement="right">
+            <IconButton href="#contact" aria-label="Home" aria-haspopup="true">
               <AccountBoxRoundedIcon />
             </IconButton>
           </Tooltip>
@@ -250,8 +259,18 @@ function Landing(props) {
             </IconButton>
           </Tooltip>
         </div>
-        <span className="textbox">
-          <Contact />
+        <div className="projectsIcon">
+          <Tooltip title="Projects" placement="right">
+            <IconButton href="#projects">
+              <LaptopMacIcon />
+            </IconButton>
+          </Tooltip>
+        </div>
+        <span className="textbox" id="contact">
+          <Waypoint onEnter={() => setContactOpen(true)} />
+          <animated.div style={fade}>
+            <Contact />{" "}
+          </animated.div>
         </span>
       </div>
     </div>
