@@ -180,21 +180,36 @@ function Landing(props) {
       <div className="pimg1">
         {" "}
         <div className="aboutIcon">
-          <Tooltip title="Info" placement="right">
+          <Tooltip
+            title="Info"
+            placement="right"
+            disableHoverListener
+            disableFocusListener
+          >
             <IconButton href="#projects" aria-label="Home" aria-haspopup="true">
               <AccountBoxRoundedIcon />
             </IconButton>
           </Tooltip>
         </div>
         <div className="homeIcon">
-          <Tooltip title="Home" placement="right">
+          <Tooltip
+            title="Home"
+            placement="right"
+            disableHoverListener
+            disableFocusListener
+          >
             <IconButton href="#homeIcon">
               <DeckIcon />
             </IconButton>
           </Tooltip>
         </div>
         <div className="projectsIcon">
-          <Tooltip title="Projects" placement="right">
+          <Tooltip
+            title="Projects"
+            placement="right"
+            disableHoverListener
+            disableFocusListener
+          >
             <IconButton href="#projects">
               <LaptopMacIcon />
             </IconButton>
