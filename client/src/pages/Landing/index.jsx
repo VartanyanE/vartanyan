@@ -35,6 +35,7 @@ import AboutCard from "../../components/About/index";
 import DeckIcon from "@material-ui/icons/Deck";
 import Card1 from "../../components/Card1/index";
 import LaptopMacIcon from "@material-ui/icons/LaptopMac";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -47,7 +47,7 @@ body {
   .card {
     width: 30ch;
     height: 30ch;
-    background: grey;
+    background: #fbfbef;
     border-radius: 5px;
     background-image: url(../../images/planthood.png);
     background-size: cover;

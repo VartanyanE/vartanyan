@@ -10,6 +10,7 @@ import { useTransition, animated, useSpring, config } from "react-spring";
 import AddToHomeScreenIcon from "@material-ui/icons/AddToHomeScreen";
 import IconButton from "@material-ui/core/IconButton";
 import SendIcon from "@material-ui/icons/Send";
+import { Link } from "react-scroll";
 import "./style.css";
 toast.configure();
 
@@ -40,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   messageInput: {
     height: "80px",
     backgroundColor: "#FBFBEF !important",
-    borderRadius: "10px",
+
     fontSize: "20px",
     fontFamily: "Alata sans-serif",
   },
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 
   input: {
     backgroundColor: "#FBFBEF !important",
-    borderRadius: "10px",
+
     marginBottom: "6px !important",
     fontSize: "20px",
     fontFamily: "Alata sans-serif",
@@ -95,8 +96,15 @@ function Contact() {
       data: data,
     }).then((response) => {
       if (response.data.msg === "success") {
-        toast("Message Sent!");
-        // toggle(true);
+        toast.info("Your Message Has Been Received!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
 
         // setTimeout(function () {
         //   messageClear();
@@ -115,7 +123,7 @@ function Contact() {
         <Grid item xs={6} className={classes.itemCenter}>
           <strong>
             {" "}
-            <h3>Contact Form</h3>
+            <h3>Send Me A Message</h3>
           </strong>
         </Grid>
         <Grid item xs={3}></Grid>
