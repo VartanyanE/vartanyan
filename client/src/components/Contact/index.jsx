@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
-// import { BrowserRouter as Router } from "react-router-dom";
-import { Paper, Grid, Button } from "@material-ui/core";
+
+import { Grid, Button } from "@material-ui/core";
 import { useForm } from "react-hook-form";
-import { toast, ToastContainer, Zoom, Bounce } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useTransition, animated, useSpring, config } from "react-spring";
-import AddToHomeScreenIcon from "@material-ui/icons/AddToHomeScreen";
-import IconButton from "@material-ui/core/IconButton";
-import SendIcon from "@material-ui/icons/Send";
-import { Link } from "react-scroll";
+
 import "./style.css";
 toast.configure();
 
@@ -71,19 +67,6 @@ function Contact() {
   const classes = useStyles();
   const [on, toggle] = useState(false);
   const { register, handleSubmit, reset } = useForm();
-  // const successToast = () => {
-  //   toast("Your Message Was Sent!", {
-  //     className: "customtoast",
-  //     draggable: true,
-  //     position: toast.POSITION.BOTTOM_CENTER,
-  //     transition: Zoom,
-  //     autoClose: 4000,
-  //   });
-  // };
-
-  const animation = useSpring({
-    opacity: on ? 1 : 0,
-  });
 
   const messageClear = () => {
     toggle(false);
@@ -117,7 +100,7 @@ function Contact() {
   };
 
   return (
-    <animated.div className={classes.root}>
+    <div className={classes.root}>
       <Grid container spacing={0} style={{ marginTop: "100px" }}>
         <Grid item xs={3}></Grid>
         <Grid item xs={6} className={classes.itemCenter}>
@@ -159,17 +142,16 @@ function Contact() {
               variant="contained"
               color="secondary"
               type="submit"
-              startIcon={<SendIcon />}
             >
               Send
             </Button>
           </form>
-          <animated.h5 className={classes.messageSucces} style={animation}>
+          <h5 className={classes.messageSucces}>
             Got it! Will get back to you ASAP!
-          </animated.h5>
+          </h5>
         </Grid>
       </Grid>
-    </animated.div>
+    </div>
   );
 }
 
