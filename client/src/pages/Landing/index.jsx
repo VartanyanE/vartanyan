@@ -5,9 +5,18 @@ import "./style.css";
 function Landing(props) {
   console.log(props);
   return (
-    <div>
-      <Contact />
-    </div>
+    <>
+      <div className="intro">
+        HELLO.
+        <br /> i AM EMANUIL VARTANYAN.
+      </div>
+      <div className="nav">SKILLS </div>
+      <div className="nav1">WORKS</div>
+      <div className="nav2">EMAIL</div>
+      <div className="about">
+        [FULL STACK DEVELOPER, <br /> WEB ARTIST, CODE MONKEY]
+      </div>
+    </>
   );
 }
 
