@@ -9,7 +9,8 @@ function App() {
 
   return (
     <Router>
-      <Landing />
+      <Route exact path="/" component={Landing}  />
+      <Route exact path="/bio" component={Landing}  />
     </Router>
   );
 }
