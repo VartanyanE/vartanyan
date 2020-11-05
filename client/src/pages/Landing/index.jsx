@@ -8,14 +8,11 @@ function Landing(props) {
   return (
     <>
       <div className="wrapper">
-        <div>
-          <img src={image} />
-        </div>
+        {/* <div className="image">
+          <img src={image} />{" "}
+        </div> */}
         <div className="main">
-          <h1>
-            hello.
-            <br /> <br /> i am emanuil vartanyan.
-          </h1>
+          <h1>i am emanuil vartanyan.</h1>
           <div className="nested">
             <div className="info">
               <h1>web artist</h1>
@@ -24,9 +21,18 @@ function Landing(props) {
             <div className="info1">
               <h1>code magician</h1>
             </div>
-            <div className="button-margin">
-              <a href="#" className="btn">
-                skills
+          </div>
+          <div className="nested-again">
+            <div class="share-button">
+              <span>HOVER </span>
+              <a href="#">
+                <button className="button-style">BIO</button>
+              </a>
+              <a href="#">
+                <button className="button-style">PROJECTS</button>{" "}
+              </a>
+              <a href="#">
+                <button className="button-style">CONTACT</button>{" "}
               </a>
             </div>
           </div>
