@@ -31,13 +31,13 @@ a {
 
   row-gap: 60px;
 
-  @media all and(max-width:$phone) {
+  @media all and(max-width:600px) {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 20px;
     grid-auto-rows: minmax(40px, auto);
   }
-  @media all and(max-width:$tablet) {
+  @media all and(max-width:768px) {
     grid-template-columns: 1fr;
     row-gap: 0px;
     grid-auto-rows: minmax(40px, auto);
@@ -54,7 +54,7 @@ a {
 
   height: 400px;
 
-  @media all and(max-width: $phone) {
+  @media all and(max-width: 600px) {
     height: 300px;
     background-image: url("../../photo.jpg");
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@ a {
     grid-column-start: 1;
     grid-column-end: 4;
   }
-  @media all and(max-width: $tablet) {
+  @media all and(max-width: 768px) {
     height: 300px;
     background-image: url("../../photo.jpg");
     background-repeat: no-repeat;
@@ -86,7 +86,7 @@ a {
   padding: 5px !important;
 
   border-bottom: 40px solid #ffff99;
-  @media all and(max-width: $tablet) {
+  @media all and(max-width: 768px) {
     font-size: 30px;
   }
 }
@@ -96,7 +96,7 @@ a {
   justify-self: center;
   color: white;
 
-  @media all and(max-width:$tablet) {
+  @media all and(max-width:768px) {
     justify-self: center;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -118,7 +118,7 @@ a {
   justify-self: center;
   color: white;
 
-  @media all and(max-width:$tablet) {
+  @media all and(max-width:768px) {
     justify-self: center;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -149,7 +149,7 @@ a {
   cursor: pointer;
   transition: 0.3s linear;
 
-  @media all and(max-width:$tablet) {
+  @media all and(max-width:768px) {
     height: 60px;
     margin-top: 40px !important;
 
