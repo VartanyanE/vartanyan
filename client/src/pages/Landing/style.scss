@@ -104,6 +104,7 @@ a {
   border-bottom: 40px solid #ffff99;
   @media all and(max-width: 768px) {
     font-size: 30px;
+    border-bottom: 20px solid #ffff99;
   }
 }
 
@@ -123,23 +124,22 @@ a {
   border: 5px solid #99ffff;
 
   border-bottom: 40px solid #99ffff;
+
+  @media all and(max-width:$phone) {
+    border-bottom: 20px solid #99ffff;
+  }
 }
 
 .info h1 {
   border: 5px solid #b3ff99;
 
-  border-bottom: 40px solid #b3ff99;
+  @media all and(max-width:$phone) {
+    border-bottom: 20px solid #b3ff99;
+  }
 }
 .info1 {
   justify-self: center;
   color: white;
-
-  @media all and(max-width:768px) {
-    justify-self: center;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    margin-top: 40px !important;
-  }
 }
 
 .button-style {
