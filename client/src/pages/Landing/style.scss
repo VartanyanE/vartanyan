@@ -10,11 +10,6 @@ $desktop: 1200px;
   font-family: "Trispace", sans-serif;
 }
 
-html,
-body {
-  height: 100%;
-  background-color: #0f1921;
-}
 a {
   font-size: 1.5rem;
   padding: 1rem 3rem;
@@ -58,7 +53,7 @@ a {
   background-size: contain;
   background-position: center;
 
-  height: 400px;
+  height: 300px;
 
   @media all and(max-width: $phone) {
     margin-top: 5px !important;
@@ -132,7 +127,7 @@ a {
 
 .info h1 {
   border: 5px solid #b3ff99;
-
+  border-bottom: 40px solid #b3ff99;
   @media all and(max-width:$phone) {
     border-bottom: 20px solid #b3ff99;
   }
@@ -170,7 +165,7 @@ a {
     margin-top: 40px !important;
 
     span:before {
-      content: "CLICK";
+      content: "";
     }
   }
 }

@@ -1,0 +1,61 @@
+$phone: 600px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+.bio-wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* grid-gap: 1em; */
+  /* grid-auto-rows:100px; */
+  border: 5px solid #ffff99;
+  padding: 5px !important;
+
+  border-bottom: 40px solid #ffff99;
+  row-gap: 60px;
+
+  @media all and(max-width:$phone) {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    grid-auto-rows: minmax(40px, auto);
+  }
+  @media all and(max-width:$tablet) {
+    grid-template-columns: 1fr;
+    row-gap: 0px;
+    grid-auto-rows: minmax(40px, auto);
+  }
+  @media all and(max-width:$laptop) {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    grid-auto-rows: minmax(40px, auto);
+  }
+}
+
+.bio-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin: 30px !important;
+}
+
+.bio-cards2 {
+  border: 5px solid white;
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  height: 300px;
+  width: 300px;
+  margin: 30px !important;
+}
+.bio-cards3 {
+  border: 5px solid white;
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  height: 300px;
+  width: 300px;
+  margin: 30px !important;
+  align-items: flex-end;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
+  grid-column-start: 2;
+}
