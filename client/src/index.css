@@ -2,3 +2,9 @@
   margin: 0 !important;
   padding: 0 !important;
 }
+
+html,
+body {
+  height: 100%;
+  background-color: #0f1921;
+}
