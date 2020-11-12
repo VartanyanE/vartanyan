@@ -4,9 +4,10 @@ $laptop: 992px;
 $desktop: 1200px;
 
 .bio-wrapper {
-  height: 100%;
+  height: 100vh;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   /* grid-template-columns: repeat(2, 1fr); */
   /* grid-gap: 1em; */
   /* grid-auto-rows:100px; */
@@ -14,13 +15,13 @@ $desktop: 1200px;
   padding: 5px !important;
 
   border-bottom: 40px solid #ffff99;
-  row-gap: 60px;
+  //   row-gap: 60px;
 
   @media all and(max-width:$phone) {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 10px;
-    grid-auto-rows: minmax(40px, auto);
+    // grid-auto-rows: minmax(40px, auto);
   }
   @media all and(max-width:$tablet) {
     grid-template-columns: 1fr;
@@ -36,4 +37,37 @@ $desktop: 1200px;
 
 .bio-cards {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin: 30px !important;
+}
+
+.bio-cards2 {
+  border: 5px solid white;
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  height: 200px;
+  width: 350px;
+  margin: 30px !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skills {
+}
+.bio-cards3 {
+  border: 5px solid white;
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  height: 200px;
+  width: 350px;
+  margin: 30px !important;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
+  grid-column-start: 2;
+}
+
+.bio-text {
+  grid-column: 2;
+  color: white;
+  align-self: center;
+  justify-self: center;
 }

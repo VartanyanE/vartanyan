@@ -3,6 +3,7 @@ import Contact from "../../components/Contact/index";
 import "./style.scss";
 import image from "../../photo.jpg";
 import { Link } from "react-router-dom";
+import SimpleBottomNavigation from "../../components/BottomNav/BottomNav";
 
 function Landing(props) {
   console.log(props);
@@ -25,8 +26,8 @@ function Landing(props) {
         <div className="info1">
           <h1>code magician</h1>
         </div>
-
-        <div class="share-button">
+        <SimpleBottomNavigation />
+        {/* <div class="share-button">
           <span>HOVER </span>
           <Link to="bio">
             <a href="#">
@@ -39,7 +40,7 @@ function Landing(props) {
           <a href="#">
             <button className="button-style">CONTACT</button>{" "}
           </a>
-        </div>
+        </div> */}
       </div>
     </>
   );

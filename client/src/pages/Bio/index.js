@@ -7,7 +7,15 @@ function Bio(props) {
   return (
     <>
       <div className="bio-wrapper">
-        <div className="card"></div>
+        <div className="bio-cards">
+          <div className="bio-cards2">
+            <div className="skills">HTML CSS JAVASCRIPT</div>
+          </div>
+          <div className="bio-cards3"></div>
+          <div className="bio-text">BIOGRAPHY</div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </>
   );
