@@ -3,9 +3,17 @@ import Contact from "../../components/Contact/index";
 import "./style.scss";
 import image from "../../photo.jpg";
 import { Link } from "react-router-dom";
+import SimpleBottomNavigation from "../../components/BottomNav/BottomNav";
+import { withRouter } from "react-router-dom";
 
 function Landing(props) {
   console.log(props);
+ const goHome = () => {
+  props.history.push({
+    pathname: "/",
+  });
+
+  }
   return (
     <>
       <div className="wrapper">
@@ -25,8 +33,10 @@ function Landing(props) {
         <div className="info1">
           <h1>code magician</h1>
         </div>
-
-        <div class="share-button">
+        <div className="bottomNav">
+        <SimpleBottomNavigation
+        home={goHome} /></div>
+        {/* <div class="share-button">
           <span>HOVER </span>
           <Link to="bio">
             <a href="#">
@@ -39,10 +49,10 @@ function Landing(props) {
           <a href="#">
             <button className="button-style">CONTACT</button>{" "}
           </a>
-        </div>
+        </div> */}
       </div>
     </>
   );
 }
 
-export default Landing;
+export default withRouter(Landing);
