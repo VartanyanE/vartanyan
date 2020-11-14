@@ -6,10 +6,34 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import VisibilityIcon from "@material-ui/icons/Visibility";
+import HomeIcon from "@material-ui/icons/Home";
+import MenuBookIcon from "@material-ui/icons/MenuBook";
+import BuildIcon from "@material-ui/icons/Build";
+import EmailIcon from "@material-ui/icons/Email";
+import { withRouter } from "react-router";
 
-export default function SimpleBottomNavigation(props) {
+function SimpleBottomNavigation(props) {
   const [value, setValue] = React.useState(0);
-
+  const goHome = () => {
+    props.history.push({
+      pathname: "/",
+    });
+  };
+  const goBio = () => {
+    props.history.push({
+      pathname: "/bio",
+    });
+  };
+  const goProjects = () => {
+    props.history.push({
+      pathname: "/projects",
+    });
+  };
+  const goContact = () => {
+    props.history.push({
+      pathname: "/contact",
+    });
+  };
   return (
     <BottomNavigation
       value={value}
@@ -20,25 +44,27 @@ export default function SimpleBottomNavigation(props) {
       className="nav-style"
     >
       <BottomNavigationAction
-        onClick={props.compliment}
-        label="Compliment"
-        icon={<ThumbUpIcon />}
+        onClick={goHome}
+        label="HOME"
+        icon={<HomeIcon />}
       />
       <BottomNavigationAction
-        onClick={props.joke}
-        label="Joke"
-        icon={<InsertEmoticonIcon />}
+        onClick={goBio}
+        label="BIO"
+        icon={<MenuBookIcon />}
       />{" "}
       <BottomNavigationAction
-        onClick={props.motivate}
-        label="Quote Of The Day"
-        icon={<VisibilityIcon />}
+        onClick={goProjects}
+        label="PROJECTS"
+        icon={<BuildIcon />}
       />
       <BottomNavigationAction
-        onClick={props.horoscope}
-        label="Horoscope"
-        icon={<VisibilityIcon />}
+        onClick={goContact}
+        label="CONTACT"
+        icon={<EmailIcon />}
       />
     </BottomNavigation>
   );
 }
+
+export default withRouter(SimpleBottomNavigation);
