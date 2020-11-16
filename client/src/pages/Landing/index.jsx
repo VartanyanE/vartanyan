@@ -15,7 +15,19 @@ function Landing(props) {
   const [toggle, setToggle] = useState(false);
   console.log(props);
   const animate = useSpring({
-    transform: toggle ? `translate3d(0,0,0) ` : `translate3d(100%, 0,0) `,
+    config: { duration: 950, tension: 400, mass: 5 },
+    transform: toggle ? `translate3d(0,0,0) ` : `translate3d(100%, 100%,0) `,
+  });
+
+  const image = useSpring({
+    config: {
+      duration: 2000,
+      tension: 400,
+      mass: 5,
+    },
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: 900,
   });
 
   const tog = useSpring({});
@@ -27,7 +39,7 @@ function Landing(props) {
         </div> */}
 
         <animated.div className="main" style={animate}>
-          <h1 style={{ textAlign: "center" }}>i am emanuil vartanyan</h1>
+          <h1 style={{ textAlign: "center" }}>I AM EMANUIL VARTANYAN</h1>
         </animated.div>
 
         <animated.div
@@ -37,7 +49,7 @@ function Landing(props) {
         >
           <h1>web artist</h1>
         </animated.div>
-        <div className="image"></div>
+        <animated.div style={image} className="image"></animated.div>
 
         <div className="info1">
           <h1>code magician</h1>
