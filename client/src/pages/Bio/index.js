@@ -14,21 +14,7 @@ function Bio(props) {
   return (
     <>
       <div className="bio-wrapper">
-        <div className="bio-cards">
-          <div className="bio-cards2">
-            <span className="github" onClick={myGithub}></span>
-
-            <div className="skills"></div>
-            <span className="linkedin" onClick={myLinkedin}></span>
-          </div>
-          <div className="bio-cards3"></div>
-          <div className="bio-text">
-            I'M A FULL STACK WEB DEVELOPER. I SPECIALIZE IN CREATING BEAUTIFUL,
-            MINIMALISTIC, RESPONSIVE WEB APPS.
-          </div>
-          <div></div>
-          <div></div>
-        </div>
+       <div className="bio-heading"><h1>BIOGRAPHY</h1></div>
       </div>
     </>
   );

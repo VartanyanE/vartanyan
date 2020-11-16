@@ -4,7 +4,7 @@ $laptop: 992px;
 $desktop: 1200px;
 
 .bio-wrapper {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -14,7 +14,6 @@ $desktop: 1200px;
   border-top: 5px solid #ffff99;
   border-right: 5px solid #ffff99;
   border-left: 5px solid #ffff99;
-  padding: 5px !important;
 
   //   row-gap: 60px;
 
@@ -23,7 +22,6 @@ $desktop: 1200px;
     grid-template-columns: 1fr;
     row-gap: 10px;
     grid-auto-rows: minmax(40px, auto);
-    // grid-auto-rows: minmax(40px, auto);
   }
   @media all and(max-width:$tablet) {
     grid-template-columns: 1fr;
@@ -36,42 +34,61 @@ $desktop: 1200px;
     grid-auto-rows: minmax(40px, auto);
   }
 }
+.bio-heading {
+  justify-self: center;
+  font-family: "Dancing Script", cursive;
+  color: white;
 
-.bio-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  margin: 30px !important;
-}
-
-.bio-cards2 {
-  border: 5px solid white;
-  background: linear-gradient(to right, #56ccf2, #2f80ed);
-  height: 200px;
-  width: 350px;
-  margin: 30px !important;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 10px !important;
-}
-
-.skills {
   grid-column-start: 1;
   grid-column-end: 3;
-  justify-self: center;
-  font-family: "Trispace", sans-serif;
 }
 
-.bio-cards3 {
-  border: 5px solid white;
-  background: linear-gradient(to right, #56ccf2, #2f80ed);
-  height: 200px;
-  width: 350px;
-  margin: 30px !important;
-  grid-row-start: row1-start;
-  grid-row-end: 3;
-  grid-column-start: 2;
+.bio-heading h1 {
+  justify-content: center;
+  font-family: "Dancing Script", cursive;
+  color: white;
+  font-size: 40px;
+  border: 5px solid #ffff99;
+  padding: 5px !important;
+  margin-top: 10px !important;
+  border-bottom: 40px solid #ffff99;
 }
+
+// .bio-cards {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+
+//   margin: 30px !important;
+// }
+
+// .bio-cards2 {
+//   border: 5px solid white;
+//   background: linear-gradient(to right, #56ccf2, #2f80ed);
+//   height: 200px;
+//   width: 350px;
+//   margin: 30px !important;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   padding: 10px !important;
+// }
+
+// .skills {
+//   grid-column-start: 1;
+//   grid-column-end: 3;
+//   justify-self: center;
+//   font-family: "Trispace", sans-serif;
+// }
+
+// .bio-cards3 {
+//   border: 5px solid white;
+//   background: linear-gradient(to right, #56ccf2, #2f80ed);
+//   height: 200px;
+//   width: 350px;
+//   margin: 30px !important;
+//   grid-row-start: row1-start;
+//   grid-row-end: 3;
+//   grid-column-start: 2;
+// }
 
 .bio-text {
   grid-column: 2;

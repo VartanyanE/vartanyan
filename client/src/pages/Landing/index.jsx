@@ -58,5 +58,4 @@ function Landing(props) {
     </>
   );
 }
-
 export default withRouter(Landing);
