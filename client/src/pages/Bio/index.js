@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { animated, useSpring } from "react-spring";
 import "./style.scss";
-import { Link } from "react-router-dom";
 
 function Bio(props) {
+  const [main, setMain] = useState(false);
+  const scale = useSpring({
+    transform: main ? " scale(1.2) " : `scale(1)`,
+  });
   const myGithub = () => window.open("https://github.com/VartanyanE", "_blank");
   const myLinkedin = () => {
     window.open(
@@ -14,7 +18,19 @@ function Bio(props) {
   return (
     <>
       <div className="bio-wrapper">
-       <div className="bio-heading"><h1>BIOGRAPHY</h1></div>
+        <div className="bio-heading">
+          <h1>BIOGRAPHY</h1>
+        </div>
+        <animated.div
+          className="bio-main"
+          onMouseEnter={() => setMain(!main)}
+          onMouseLeave={() => setMain(!main)}
+          style={scale}
+        >
+          <div>JUST</div>
+          <div>A</div>
+          <div>SOFTWARE</div>
+        </animated.div>
       </div>
     </>
   );
