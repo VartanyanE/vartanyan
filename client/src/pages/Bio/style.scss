@@ -64,12 +64,44 @@ $desktop: 1200px;
   border-bottom: 40px solid #99ffff;
   font-size: 20px;
   line-height: 1.8em;
+  @media all and(max-width:$phone) {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    // grid-auto-rows: minmax(40px, auto);
+    font-size: 14px !important;
+    width: 85%;
+  }
+  @media all and(max-width:$tablet) {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    // grid-auto-rows: minmax(40px, auto);
+  }
+  @media all and(max-width:$laptop) {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
 }
 
-.bio-animation {
-  display: inline;
+.big-font {
+  font-size: 25px;
+  @media all and(max-width:$phone) {
+    font-size: 20px;
+  }
 }
 
+.break {
+  @media all and(max-width:$phone) {
+    display: none;
+  }
+  @media all and(max-width:$tablet) {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    // grid-auto-rows: minmax(40px, auto);
+    font-size: 14px !important;
+    width: 75%;
+    height: 400px;
+  }
+}
 // .bio-cards {
 //   display: grid;
 //   grid-template-columns: 1fr 1fr;
