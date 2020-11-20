@@ -3,13 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    to right,
-    #a1ffce,
-    #faffd1
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  position: fixed;
+  background: linear-gradient(to right, #a1ffce, #faffd1);
+  z-index: 10;
+  position: absolute;
   left: 0;
   bottom: 0;
 }

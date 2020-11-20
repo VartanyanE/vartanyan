@@ -54,7 +54,7 @@ function Landing(props) {
         ></animated.div>
 
         <div className="info1">
-          <h1>code magician</h1>
+          <h1>code connoisseur</h1>
         </div>
       </div>
     </>

@@ -190,6 +190,8 @@ function Bio(props) {
             GIT.
           </animated.div>
         </animated.div>
+    
+    <div className="linkedin" onClick={myLinkedin}>Hello</div>
       </div>
     </>
   );
