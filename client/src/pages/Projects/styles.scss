@@ -25,6 +25,7 @@ $desktop: 1200px;
   @media all and(max-width:$tablet) {
     grid-template-columns: 1fr;
     row-gap: 10px;
+    font-size: 14px !important;
     // grid-auto-rows: minmax(40px, auto);
   }
   //   row-gap: 60px;
@@ -89,6 +90,7 @@ $desktop: 1200px;
     grid-template-columns: 1fr;
     row-gap: 10px;
     // grid-auto-rows: minmax(40px, auto);
+    width: 85%;
   }
 }
 
@@ -186,8 +188,8 @@ $desktop: 1200px;
   height: 200px;
 
   @media all and(max-width:$phone) {
-    margin-top: 120px !important;
-    width: 55%;
+    margin-top: 150px !important;
+
     justify-self: center;
   }
   @media all and(max-width:$tablet) {
