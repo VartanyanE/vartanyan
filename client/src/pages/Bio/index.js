@@ -129,7 +129,6 @@ function Bio(props) {
     config: { duration: 1950, tension: 400, mass: 3 },
     transform: toggle ? `translate3d(0,0,0) ` : `translate3d(1000%, 0,0) `,
   });
-  const myGithub = () => window.open("https://github.com/VartanyanE", "_blank");
   const myLinkedin = () => {
     window.open(
       "https://www.linkedin.com/in/emanuil-vartanyan-064318193/",
@@ -190,8 +189,10 @@ function Bio(props) {
             GIT.
           </animated.div>
         </animated.div>
-    
-    <div className="linkedin" onClick={myLinkedin}>Hello</div>
+
+        <div className="linkedin" onClick={myLinkedin}>
+          Hello
+        </div>
       </div>
     </>
   );
