@@ -17,13 +17,13 @@ $desktop: 1200px;
   border-left: 5px solid #ffff99;
   row-gap: 20px;
   @media all and(max-width:$phone) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     row-gap: 10px;
     // grid-auto-rows: minmax(40px, auto);
     font-size: 14px !important;
   }
   @media all and(max-width:$tablet) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     row-gap: 10px;
     font-size: 14px !important;
     // grid-auto-rows: minmax(40px, auto);
@@ -84,13 +84,11 @@ $desktop: 1200px;
     row-gap: 10px;
     // grid-auto-rows: minmax(40px, auto);
     font-size: 14px !important;
-    width: 85%;
   }
   @media all and(max-width:$tablet) {
     grid-template-columns: 1fr;
     row-gap: 10px;
     // grid-auto-rows: minmax(40px, auto);
-    width: 85%;
   }
 }
 
@@ -186,6 +184,7 @@ $desktop: 1200px;
   grid-column-end: 3;
   cursor: pointer;
   height: 200px;
+  margin-top: 120px !important;
 
   @media all and(max-width:$phone) {
     margin-top: 150px !important;
@@ -193,8 +192,13 @@ $desktop: 1200px;
     justify-self: center;
   }
   @media all and(max-width:$tablet) {
-    grid-template-columns: 1fr;
-    row-gap: 10px;
+    margin-top: 150px !important;
+
+    // grid-auto-rows: minmax(40px, auto);
+  }
+  @media all and(max-width:$laptop) {
+    margin-top: 150px !important;
+
     // grid-auto-rows: minmax(40px, auto);
   }
 }
@@ -208,6 +212,11 @@ $desktop: 1200px;
   grid-column-end: 3;
   cursor: pointer;
   height: 100%;
+  width: 100%;
+  @media all and(max-width:$phone) {
+  }
+  @media all and(max-width:$tablet) {
+  }
 }
 
 .palmbuddy {
@@ -220,4 +229,9 @@ $desktop: 1200px;
   grid-column-end: 3;
   cursor: pointer;
   height: 100%;
+  width: 100%;
+  @media all and(max-width:$phone) {
+  }
+  @media all and(max-width:$tablet) {
+  }
 }

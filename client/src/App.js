@@ -6,7 +6,7 @@ import SimpleBottomNavigation from "./components/BottomNav/BottomNav";
 import Landing from "./pages/Landing";
 import Bio from "./pages/Bio";
 import Projects from "./pages/Projects";
-
+import Contact from "./pages/Contact/index";
 function App() {
   useEffect(() => {}, []);
 
@@ -16,6 +16,7 @@ function App() {
       <Route exact path="/" component={Landing} />
       <Route exact path="/bio" component={Bio} />
       <Route exact path="/projects" component={Projects} />
+      <Route exact path="/contact" component={Contact} />
     </Router>
   );
 }
