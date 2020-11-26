@@ -48,7 +48,7 @@ function Contact(props) {
         <div className="contact-main">
           <form onSubmit={handleSubmit(onSubmit)} className="form-style">
             <input
-              //   className={classes.input}
+              className="name-area"
               type="text"
               placeholder="Name"
               name="name"
