@@ -19,15 +19,16 @@ function Contact(props) {
       data: data,
     }).then((response) => {
       if (response.data.msg === "success") {
-        toast.info("Your Message Has Been Received!", {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        alert("Message Sent");
+        // toast.info("Your Message Has Been Received!", {
+        //   position: "top",
+        //   autoClose: 3000,
+        //   hideProgressBar: true,
+        //   closeOnClick: true,
+        //   pauseOnHover: true,
+        //   draggable: true,
+        //   progress: undefined,
+        // });
 
         // setTimeout(function () {
         //   messageClear();
@@ -79,7 +80,7 @@ function Contact(props) {
               type="submit"
               //   startIcon={<SendIcon />}
             >
-              Send
+              SEND IT
             </button>
           </form>
         </div>
